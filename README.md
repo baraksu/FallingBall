@@ -1,90 +1,43 @@
-.MODEL SMALL
-.STACK 100h
+project name : Fallin Ball
+programmer name : Tamir Malkesman
+teacher name : Barak 
+school name : Bney Aciva Givat Shmuel
+class : 10th grade 2
+year : 2024
+===================================
+The program draws stairs and a ball rolls down the stairs.
 
-.DATA
+The user is able to set the wide of the stair value , the radios of the ball value , watch and enjoy ;-)
 
-msg1 db 13,10,'Enter the stair wide $'
-msg2 db 13,10,'Enter the radios od the ball $'
+![צילום מסך 2024-05-27 102706](https://github.com/baraksu/FallingBall/assets/167132950/495ec4c5-7461-442b-bd15-e9b4dfb9848c)
 
-wide dw 0
-radios db 0
-cotter dw 0
-
-x_ dw 0
-y_ dw 0
-color dw 255
-
-.CODE 
-
-proc DrawStair 
- pusha
-mov cx,wide
-    
-lop:
-
-
-    xor bh, bh  ; bh = 0
-	mov cx, [x_]
-	mov dx, [y_]
-	mov ax, [color]
-	mov ah, 0ch
-	int 10h
-		
-	inc x_
-loop lop
+here the the user set the values (wide & radios)
 
 
 
-popa
-ret              
-endp DrawStair
+![צילום מסך 2024-05-27 103155](https://github.com/baraksu/FallingBall/assets/167132950/52d24521-8fea-4d33-b32a-29b1a08a09cf)
 
-    
-start:
-mov ax , @data
-mov DS, AX
-xor ax,ax
-
-lea dx,msg1
-mov ah,9
-int 21h
-
-xor ax,ax
-
-mov AH, 01h
-int 21h
-
-sub al,'0' 
-cbw
-mov wide,ax
+the program draws the stairs
 
 
-lea dx,msg2
-mov ah,9
-int 21h
+![צילום מסך 2024-05-27 103510](https://github.com/baraksu/FallingBall/assets/167132950/af22b127-9e97-4785-93d4-7cb4a45ce5ed)
 
-mov AH, 01h
-int 21h
-
-sub al,'0'
-mov radios,al
-
-mov al,radios
-add al,radios
-cbw
-mov cotter,ax
+![צילום מסך 2024-05-27 103518](https://github.com/baraksu/FallingBall/assets/167132950/7310aefe-67ba-4e86-b77f-2cd013d91756)
 
 
-mov ax, 13h
-int 10h
+the ball is rolling the stairs
 
-mov ax,cotter       
-mov y_,ax       
-call DrawStair
+==============================================
+First I receive the values of the stair and the ball.
+I calculated the number of times that stairs should be drawn on the screen.
+I worte the stairs proc.
+I call the proc the number of time I calculated (mentioned above)
+I entered the circle proc.
+I gave data to the circle proc.
+I draw a black circle on the white , in order to erase it.
 
+In the future I would add an option to push a button and the ball jumps between the stairs.
 
-
-
-
-
-END start
+The project was a positive experience, it was challenging and I beleive I succeeded.
+ןןןן
+ן
