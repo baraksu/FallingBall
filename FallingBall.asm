@@ -5,6 +5,7 @@
 
 msg1 db 13,10,'Enter the stair wide $'
 msg2 db 13,10,'Enter the radios od the ball $'
+msg3 db 13,10,'Enter the color of the ball $'
 
 t1 db 13,10,'  _____     _ _ _               ____        _ _ $' 
 t2 db 13,10,' |  ___|_ _| | (_)_ __   __ _  | __ )  __ _| | |$'
@@ -81,7 +82,24 @@ proc get_radios
     mov radios,ax
 
 ret
-endp get_radios    
+endp get_radios
+
+;=============== ; get the color
+
+proc get_color
+    lea dx,msg3
+    mov ah,9
+    int 21h
+    
+    mov AH, 01h
+    int 21h
+    
+    sub al,'0'
+    cbw
+    mov color,ax
+
+ret
+endp get_color 
 
 ;==============  ; print the titel
     
@@ -336,7 +354,9 @@ call titel ; print the titel
 
 call get_wide ; get & set the wide value
  
-call get_radios ; get & set the radios value
+call get_radios ; get & set the radios value 
+
+call get_color
 
 mov ax,radios
 add ax,radios
@@ -545,7 +565,8 @@ pop bx
 pop bx
 
 mov ax,y_center   ; push the ball down  
-add ax,cotter
+add ax,cotter 
+add ax,radios
 mov y_center,ax 
  
 mov bx ,color2
