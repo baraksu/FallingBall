@@ -29,11 +29,17 @@ the ball is rolling the stairs
 
 ==============================================
 First I receive the values of the stair and the ball.
+
 I calculated the number of times that stairs should be drawn on the screen.
+
 I worte the stairs proc.
+
 I call the proc the number of time I calculated (mentioned above)
+
 I entered the circle proc.
+
 I gave data to the circle proc.
+
 I draw a black circle on the white , in order to erase it.
 
 In the future I would add an option to push a button and the ball jumps between the stairs.
