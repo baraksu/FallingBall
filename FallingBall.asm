@@ -32,7 +32,7 @@ y_center dw 0
 color2 dw 0
 
 .CODE
-;=============
+;=============  ; get the wide from the user and set it
 proc get_wide
     lea dx,msg1
     mov ah,9
@@ -44,13 +44,29 @@ proc get_wide
     int 21h
 
     sub al,'0' 
-    cbw 
-
+    cbw
+    
+    mov bl,10
+    mul bl 
     mov wide,ax 
+    
+    xor ax,ax
+    
+    mov AH, 01h
+    int 21h
+
+    sub al,'0' 
+    cbw
+    
+    add wide,ax 
+    
+    
+    
+     
 ret 
 endp get_wide  
 
-;==============
+;============== ; get the radios from the user and set it
 
 proc get_radios
     lea dx,msg2
@@ -67,7 +83,7 @@ proc get_radios
 ret
 endp get_radios    
 
-;==============
+;==============  ; print the titel
     
 proc titel
     lea dx,t1
@@ -97,7 +113,7 @@ proc titel
 ret
 endp titel 
 
-;=========
+;========= ; draw the circle with the entered values
 
 proc circle
 
@@ -268,7 +284,7 @@ ret
 endp circle 
  
 ;==============
-proc DrawStair
+proc DrawStair ; draw the stairs with the number of the time thr stairs should be drawn on the screen
     
  xor si,si 
 mov si,wide
@@ -331,15 +347,15 @@ mov ax, 13h
 int 10h
  
 
-MOV AX, 199h   
+MOV AX, 199   
 MOV Bx, cotter
-DIV dl
+DIV bl
 xor ah,ah
 mov lop_y,ax  ; the number of the times the y wont exceed of the boerd 
 
-MOV AX, 319h   
+MOV AX, 319   
 MOV Bx,wide
-DIV dl
+DIV bl
 xor ah,ah
 mov lop_x,ax ; the number of the times the x wont exceed of the boerd
 
@@ -347,7 +363,9 @@ cmp ax,lop_y
 jb run_lop_x
 
     mov si,lop_y
-    mov final_loop,si  ; the number of the times the proces will run until they sould be stopped
+    mov final_loop,si  ; the number of the times the proces will run until they sould be stopped 
+    
+    inc si
     
     jmp continue
  
@@ -358,13 +376,11 @@ run_lop_x:
     
 continue:
 
-inc si
 
 mov ax,cotter       
 add y_,ax 
 
-mov bx,wide
-add x_,bx 
+ 
 
 mov ax,cotter       
 add y_,ax     
@@ -463,7 +479,7 @@ pop bx
 
 pop bx 
 
-mov ax,x_center
+mov ax,x_center   ; push the ball forward 
 add ax, wide
 add ax,half_wide
 mov x_center,ax
@@ -527,16 +543,16 @@ pop bx
 pop bx
 
 pop bx
+
+mov ax,y_center   ; push the ball down  
+add ax,cotter
+mov y_center,ax 
  
 mov bx ,color2
 Push bx ; color 
  
 mov bx,x_center 
 Push bx ;x center
-
-mov ax,y_center
-add ax,cotter
-mov y_center,ax
 
 mov bx,y_center
 Push bx ;y center
