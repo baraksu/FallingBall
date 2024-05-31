@@ -14,11 +14,11 @@ year : 2024
 
 The program draws stairs and a ball rolls down the stairs.
 
-The user is able to set the wide of the stair value , the radios of the ball value , watch and enjoy ;-)
+The user is able to set the value of the wide stair , the value of the radios ball , watch and enjoy ;-)
 
-![צילום מסך 2024-05-27 102706](https://github.com/baraksu/FallingBall/assets/167132950/495ec4c5-7461-442b-bd15-e9b4dfb9848c)
+![צילום מסך 2024-05-31 103055](https://github.com/baraksu/FallingBall/assets/167132950/0c42a0da-c40c-4b02-b85f-414cf005e3e3)
 
-here the the user set the values (wide & radios)
+here the the user sets the values (wide & radios)
 
 
 
@@ -27,21 +27,22 @@ here the the user set the values (wide & radios)
 the program draws the stairs
 
 
-![צילום מסך 2024-05-27 103510](https://github.com/baraksu/FallingBall/assets/167132950/af22b127-9e97-4785-93d4-7cb4a45ce5ed)
-
-![צילום מסך 2024-05-27 103518](https://github.com/baraksu/FallingBall/assets/167132950/7310aefe-67ba-4e86-b77f-2cd013d91756)
+![צילום מסך 2024-05-31 103557](https://github.com/baraksu/FallingBall/assets/167132950/009ae7cb-817c-4898-874d-67e9f8b018f1)
 
 
-the ball is rolling the stairs
+![צילום מסך 2024-05-31 103618](https://github.com/baraksu/FallingBall/assets/167132950/fb3ce088-002a-45f3-aa82-255dc279b88e)
+
+the ball is rolling the down the stairs
 
 ==============================================
+
 First I receive the values of the stair and the ball.
 
 I calculated the number of times that stairs should be drawn on the screen.
 
 I worte the stairs proc.
 
-I call the proc the number of time I calculated (mentioned above)
+I called the proc number of time I calculated (mentioned above)
 
 I entered the circle proc.
 
@@ -49,7 +50,8 @@ I gave data to the circle proc.
 
 I draw a black circle on the white , in order to erase it.
 
-In the future I would add an option to push a button and the ball jumps between the stairs.
+
+In the future I would add an option to push a button and the ball will jump between the stairs.
 
 The project was a positive experience, it was challenging and I beleive I succeeded.
 ןןןן
