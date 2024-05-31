@@ -14,11 +14,12 @@
 
 ## The program draws stairs and a ball rolls down the stairs.
 
-## The user is able to set the value of the wide stair , the value of the radios ball , watch and enjoy ;-)
+## The user is able to set the value of the wide stair , the value of the radios ball ,the color , watch and enjoy ;-)
 
-![צילום מסך 2024-05-31 103055](https://github.com/baraksu/FallingBall/assets/167132950/0c42a0da-c40c-4b02-b85f-414cf005e3e3)
+![צילום מסך 2024-05-31 111839](https://github.com/baraksu/FallingBall/assets/167132950/d7f84466-3d59-45fe-9337-15a16a706913)
 
-*here the the user sets the values (wide & radios)*
+
+*here the the user sets the values (wide & radios & color)*
 
 
 
