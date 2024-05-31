@@ -67,6 +67,7 @@ I would add an option to push a button and the ball will jump between the stairs
 The project was a positive experience, it was challenging and demended creativity from me .
 I worked hard on this project and I beleive I succeeded. 
 Its good to know that I have done and I was up to do this project.
-I
+My teacher realley help me and encourage me.
+
 ןןןן
 ן
