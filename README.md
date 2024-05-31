@@ -1,9 +1,15 @@
 project name : Fallin Ball
+
 programmer name : Tamir Malkesman
+
 teacher name : Barak 
+
 school name : Bney Aciva Givat Shmuel
+
 class : 10th grade 2
+
 year : 2024
+
 ===================================
 The program draws stairs and a ball rolls down the stairs.
 
